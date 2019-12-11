@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: orangered;
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  img {padding-right: 500px;
+padding-left:0px;
+}
+  li {
+    float: left;
+    color: cornsilk;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-right:20px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: teal;
+  }
+  .dropdown:hover .content{
+      display:block;
+  }
+ .content{display: none;}

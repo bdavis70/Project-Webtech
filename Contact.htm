@@ -5,46 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"/>
     <style>
-        ul {
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
-        overflow: hidden;
-        background-color: orangered;
-        
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      }
-      
-      li {
-        float: left;
-        color: cornsilk;
-        text-align: center;
-      }
-      
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-      }
-      
-      li a:hover {
-        background-color: cornsilk;
-      }
+    form{
+    border:solid 4px;
+    margin: 0px;
+  border-color: orangered;
+  background-color: teal;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+    }  
+    #s{
+      font-family: impact;
+      background-color: orangered;
+      color: white;
+    }
+    #r{
+      font-family: impact;
+      background-color: orangered;
+      color: white;
+    }
+    h1{text-align: center;}
     </style>
+    <script>
+      function contact(){
+        let myForm = document.getElementById("form1")
+        let x=myForm.FName.value;
+        let y=myForm.LName.value;
+        if(x==""){
+          alert("Please enter first name");
+          return false;
+        }
+else if(y==""){
+  alert("Please enter last name")
+}
+      }
+    </script>
+
 </head>
 <body>
-        <ul>
-                <li><a class="home" href="index.htm">Dine in Boston</a></li>
-                <li><a href="restaurants.htm">Restaurants</a></li>
-                <li><a href="offers.htm">Offers & Promotions</a></li>
-                <li><a href="Contact.htm">Contact</a></li>  
-                </ul>
+    <ul>
+     
+        <li><a class="home" href="index.htm"><img src="images/logo.png" height="90px" width="90px"></a></li>
+        <li class="dropdown"><a href="restaurants.htm">Restaurants</a>
+          <a class="content" href="chilacates.htm">Chilacantes</a>
+          <a class="content" href="Ernestos.htm">Ernesto's</a>
+          <a class="content" href="Fogo.htm">Fogo De Chao</a>
+        </li>
+        <li><a href="offers.htm">Offers & Promotions</a></li>
+        <li><a href="Contact.htm">Contact</a></li>  
+        </ul>
                 <h1>We would love to hear from you</h1>
                 <h4>Complete the form below so that we know more about your dining habits</h4>
-                <form action="mailto:bdavis7@babson.edu" method="POST">
+                <form action="mailto:bdavis7@babson.edu" method="POST" id="form1" onsubmit="return contact()">
                         <div>
                         
     First Name:
@@ -112,8 +125,8 @@ Any additional comments?</p>
         <textarea name="comments" rows="5" cols="35"></textarea>
         </p>
         <br>
-        <input type="submit" value="Submit" name="Submit" />
-         <input type="reset" value="Reset" name="Reset" />      
+        <input type="submit" value="Submit" name="Submit" id="s" />
+         <input type="reset" value="Reset" name="Reset" id="r" />      
          </form> 
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.1341975521586!2d-71.2662344845457!3d42.29700187919118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e38142026e4821%3A0xa427fcad4944867d!2s21%20Babson%20College%20Drive%2C%20Wellesley%2C%20MA%2002482!5e0!3m2!1sen!2sus!4v1571193180885!5m2!1sen!2sus" 
          width="600" 
@@ -122,9 +135,11 @@ Any additional comments?</p>
          style="border:0;" 
          allowfullscreen="">
         </iframe>
-        <h3>Dine in Boston</h3>
-        21 Babson College drive, Wellesley MA<br>
+        <p>
+        <img src="images/logo.png" height="100px">
+        21 Babson College drive, Wellesley MA
         www.dineinboston.com
+        </p>
          </body>
          <hr>
          <p>

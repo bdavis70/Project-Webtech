@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ernestos</title>
+    <meta name="description" content="Ernesto's pizzeria in Boston">
+    <meta name="keywords" content="pizza,restaurants,food">
+    <meta name="author" content="Brandon Davis">
+    <title>Ernesto's Pizzeria</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"/>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        const slides = ["images/ernesto's.jpg", "images/pizza1.jpg", "images/pizza2.jpg", "images/pizza3.jpg","images/pizza4.jpg"];
+        let i = 0;
+        function slideShow() {
+            let slice  = document.getElementById("pizza");
+            if (i == slides.length) {
+                i = 0;
+            }
+        slice.src = slides[i];
+        i = i + 1;
+            setTimeout("slideShow()", 2000);
+        }
+  $(document).ready(function(){
+    $("#bio").click(function () { 
+$("#bio").replaceWith("<h4> Ernesto's is an award winning pizza restaurant located in Boston’s historic North End, Ernesto’s brings its own unique style to an area well-known for incredible food! For the past 30 years, patrons have flocked to our door drawn by our variety of fresh-baked slices. Both locals and tourists alike are always amazed at the selection and authenticity of the delicious pizza served here at Ernesto’s. They have two locations one in Boston and another in Somerville! Visit there restaurant today to enjoy one of the best pizza's in Boston!</h4>"); 
+});
+$("#dark").click(function(){
+$("body").css("background-color","black");
+$("h2").css("color","white");
+$("h4").css("color","white");
+});
+  });
+        
+    </script>
 </head>
-<body>
-  <h1>More Info Coming soon</h1>  
+    <body onload="slideShow()">
+            <ul>
+     
+                    <li><a class="home" href="index.htm"><img src="images/logo.png" height="90px" width="90px"></a></li>
+                    <li class="dropdown"><a href="restaurants.htm">Restaurants</a>
+                      <a class="content" href="chilacates.htm">Chilacantes</a>
+                      <a class="content" href="Ernestos.htm">Ernesto's</a>
+                      <a class="content" href="Fogo.htm">Fogo De Chao</a>
+                    </li>
+                    <li><a href="offers.htm">Offers & Promotions</a></li>
+                    <li><a href="Contact.htm">Contact</a></li>  
+                    </ul>
+                    <button id="dark">Dark Mode</button>
+                    <p>
+                    <img src="images/ernestologo.png"height="200">
+                    <h2 id="bio">Click here for more information on Ernesto's Pizzeria</h2>
+                    </p>
+        <p>
+            <img src="images/ernesto's.jpg" alt="Slide Show for Ernesto’s" title="Ernesto’s" id="pizza" height="500" width="500" />
+        </p>
+    <h2>
+        Menu
+    </h2>
+    <p>
+    <img src="images/ernestomenu1.jpg" height="500px"><br>
+    <img src="images/ernestomenu2.jpg" height="500px">
+    </p>
+
+    <h2>Reviews</h2>
+    <p>
+        <span class="yelp-review" data-review-id="c8O6kgEhS4p2nkStQhC7qA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=GFl4RNyjO8NHsX6bLOLsCQ" rel="nofollow noopener">Deena M.</a>'s <a href="https://www.yelp.com/biz/ernestos-boston?hrid=c8O6kgEhS4p2nkStQhC7qA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/7ysLZWWRw4swz6x9d6KXwg" rel="nofollow noopener">Ernesto's</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+    </p>
 </body>
 </html>

@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fogo de Chao</title>
+    <title>Fogo De Chao</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"/>
+    <meta name="description" content="Fogo de Chao in Boston MA">
+    <meta name="keywords" content="Steakhouse,restaurants,food,seafood,all-you-can-eat,fine-dining>
+    <meta name="author" content="Brandon Davis">
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        const slides = ["images/fogo2.jpg", "images/fogo1.jpg", "images/fogo2.jpg", "images/fogo3.jpg", "images/fogo4.jpg","images/fogo5.jpg"];
+        let i = 0;
+        function slideShow() {
+            let chao = document.getElementById("fogo");
+            if (i == slides.length) {
+                i = 0;
+            }
+        chao.src = slides[i];
+        i = i + 1;
+            setTimeout("slideShow()", 2000);
+        }
+  $(document).ready(function(){
+    $("#bio").click(function () { 
+$("#bio").replaceWith("<h4> Fogo de Chao is a high end brazilian steakhouse. Customer's who visit the steakhouse enjoy and unlimited supply of the finest meats and seafood. They started in 1975, and currently has many locations open in major cities like Boston, New York, Chicago, and Dallas.</h4>"); 
+});
+$("#dark").click(function(){
+$("body").css("background-color","black");
+$("h2").css("color","white");
+$("h4").css("color","white");
+});
+  });
+        
+    </script>
 </head>
-<body>
-   <h1> More info coming soon</h1>
+    <body onload="slideShow()">
+            <ul>
+     
+                    <li><a class="home" href="index.htm"><img src="images/logo.png" height="90px" width="90px"></a></li>
+                    <li class="dropdown"><a href="restaurants.htm">Restaurants</a>
+                      <a class="content" href="chilacates.htm">Chilacantes</a>
+                      <a class="content" href="Ernestos.htm">Ernesto's</a>
+                      <a class="content" href="Fogo.htm">Fogo De Chao</a>
+                    </li>
+                    <li><a href="offers.htm">Offers & Promotions</a></li>
+                    <li><a href="Contact.htm">Contact</a></li>  
+                    </ul>
+                    <button id="dark">Dark Mode</button>
+                    <p>
+                    <img src="images/fogologo.png"height="200">
+                    <h2 id="bio">Click here for more information on Fogo de ChaoS</h2>
+                    </p>
+        <p>
+            <img src="images/fogo2.jpg" alt="Slide Show for Fogo de Chao" title="Fogo" id="fogo" height="500" width="500" />
+        </p>
+    <h2>
+        Menu
+    </h2>
+    <p>
+    <img src="images/menu.jpg" height="500px">
+    </p>
+
+    <h2>Reviews</h2>
+    <p>
+            <span class="yelp-review" data-review-id="kGfRMYKjm7Wh18moph6p2w" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=I9i52KQwylY7viap-OCpgw" rel="nofollow noopener">John D.</a>'s <a href="https://www.yelp.com/biz/fogo-de-chao-brazilian-steakhouse-boston-6?hrid=kGfRMYKjm7Wh18moph6p2w" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/3G3GvCsArfZrhoRrIYxDkw" rel="nofollow noopener">Fogo de Chao Brazilian Steakhouse</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+    </p>
 </body>
 </html>

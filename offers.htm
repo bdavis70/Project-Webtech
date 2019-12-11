@@ -3,50 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find coupons to your favorite restaurants">
+    <meta name="keywords" content="coupons,deals,food delivery">
+    <meta name="author" content="Brandon Davis">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Offers & Promotions</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"/>
     <style>
-    
-    ul {
-        list-style-type: none;
-        margin: 10px;
-        padding: 0;
-        overflow: hidden;
-        background-color: orangered;
-        
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      }
-      
-      li {
-        float: left;
-        color: cornsilk;
-        text-align: center;
-      }
-      
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 12px;
-        text-decoration: none;
-      }
-      
-      li a:hover {
-        background-color: cornsilk;
-      }
-     
-      </style>
-    
+      p{font-size: larger;}
     </style>
+    <script
+    crossorigin="anonymous"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   
+    <script>
+      function changeImage(){
+        document.getElementById("grub").src= "images/doordash.jpg"
+        
+      }
+      function orginalImage(){
+        document.getElementById("grub").src= "images/grubhub.png"
+      }
+      </script>
+      <script>
+      $(document).ready(function(){
+  $("h1").click(function(){
+    $("h1").animate({left:'500px'});
+  });
+  $("#dark").click(function(){
+$("body").css("background-color","black");
+$("h1").css("color","white");
+$("h3").css("color","white");
+$("p").css("color","white");
+});
+});
+</script>
+
 </head>
       <body>
       
-      <ul>
-        <li><a class="home" href="index.htm">Dine in Boston</a></li>
-        <li><a href="restaurants.htm">Restaurants</a></li>
-        <li><a href="offer.htm">Offers & Promotions</a></li>
-        <li><a href="Contact.htm">Contact</a></li>  
-        </ul>
+          <ul>
+     
+              <li><a class="home" href="index.htm"><img src="images/logo.png" height="90px" width="90px"></a></li>
+              <li class="dropdown"><a href="restaurants.htm">Restaurants</a>
+                <a class="content" href="chilacates.htm">Chilacantes</a>
+                <a class="content" href="Ernestos.htm">Ernesto's</a>
+                <a class="content" href="Fogo.htm">Fogo De Chao</a>
+              </li>
+              <li><a href="offers.htm">Offers & Promotions</a></li>
+              <li><a href="Contact.htm">Contact</a></li>  
+              </ul>
+              <button id="dark">Dark Mode</button>
         <p>
         <h1>Want to know the best offers in your area?</h1>
         <h3>Click an area of the map </h3>
@@ -60,6 +68,12 @@
                <img src="boston-neighborhoods.jpg" usemap="#Boston" alt="Map of Boston" title="Clickable Map"/> 
             </map>
         </p>
+        <h1 style="position:relative" id="move">Food Delivery Services</h1>
+        <p>
+        <img onmouseover="changeImage()" onmouseout="orginalImage()" id="grub" src="images/grubhub.png" height= "200" width="350">
+        </p>
+        
+        <p> If you can't make it to your favorite restaurant, why not get the food delivered to you? <a href="https://www.grubhub.com">Grubhub</a> and <a href="https://www.doordash.com">Doordash</a> are two of the most popular food delivery services here in boston. They have many popular restaurants on their platform, and gives promotions and discounts occasionally.</p>
         </body>
         <hr>
         <a href="sitemap.htm">Sitemap</a>
